@@ -4,12 +4,74 @@
     <title>This is a Form</title>
     </head>
     <body>
-    <h1>This is a Form</h1>
+    <h1>Help Desk Ticket - Ungerboeck</h1>
     <form action="index.html" method="post"></form>
-        <p>Name</p>
-        <input type="text" id="name" name="user_name">
-        <p>Email Address</p>
-        <input type="email" id="email" email="user_email">
+        <fieldset>
+            <legend>Your Information</legend>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user-name">
+            </div>
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="user-email">
+            </div> 
+            <div>
+                <label for="user-id">User ID:</label>
+                <input type="text" id="user-id" name="user-id">
+            </div>
+        </fieldset> 
+        <fieldset>
+        <legend>What Do You Need Help With?</legend>
+            <div>
+                <label for="new-user">Create New User</label>
+                <input type="radio" name="issue" id="new-user">
+            </div>
+            <div>
+                <label for="usi-issue">System Issue</label>
+                <input type="radio" name="issue" id="usi-issue">
+            </div>
+        </fieldset>
+
+    <!--Fieldset necessary for New User Option; Hide if System Issue Selected-->
+        <fieldset>
+            <legend>New User Information</legend>
+            <div>
+                <label for="new-name">New User's First and Last Name:</label>
+                <input type="text" id="new-name" name="new-name">
+            </div>  
+            <div>
+                <label for="new-email">New User's Email Address:</label>
+                <input type="email" id="new-email" name="new-email">
+            </div> 
+            <div>
+                <p>Should the new user have the same setup and access as a current user?</p>
+                <input type="radio" name="copy-user" value="yes">Yes
+                <input type="radio" name="copy-user" value="no">No
+            </div>
+            <div> <!--Hide field unless Yes is chosen for copy-user-->
+                <label for="duplicate">Current User To Duplicate:</label>
+                <input type="text" id="duplicate" name="duplicate-user">
+            </div>
+        </fieldset>
+   <!--/Fieldset Necessary for New User Option; Hide if System Issue Selected-->
+
+   <!--Fieldset Necessary for System Issue; Hide if New User Selected-->
+        <fieldset>
+                <legend>USI System Issue Information</legend>
+                <div>
+                    <label for="system-issue">Describe the issue you are experiencing:</label>
+                    <input type="textarea" rows="5" cols="33" id="system-issue" name="system-issue">
+                </div>  
+                <div>
+                    <label for="system-issue">Where in the system are you experiencing this issue?:</label>
+                    <input type="textarea" id="sys-location" name="sys-location">
+                </div> 
+                <div>
+                    <label for="system-issue">How long has this been an issue?:</label>
+                    <input type="textarea" id="issue-length" name="issue-length">
+                </div>
+            </fieldset>
         <button type="submit">Submit</button>
     </body>
 </html>
