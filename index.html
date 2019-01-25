@@ -2,6 +2,7 @@
 <html>
     <head> 
     <title>This is a Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
     <h1>Help Desk Ticket - Ungerboeck</h1>
@@ -23,18 +24,18 @@
         </fieldset> 
         <fieldset>
         <legend>What Do You Need Help With?</legend>
-            <div>
+            <div class="new">
                 <label for="new-user">Create New User</label>
                 <input type="radio" name="issue" id="new-user">
             </div>
-            <div>
+            <div class="issue">
                 <label for="usi-issue">System Issue</label>
                 <input type="radio" name="issue" id="usi-issue">
             </div>
         </fieldset>
 
     <!--Fieldset necessary for New User Option; Hide if System Issue Selected-->
-        <fieldset>
+        <fieldset class="new-user">
             <legend>New User Information</legend>
             <div>
                 <label for="new-name">New User's First and Last Name:</label>
@@ -44,12 +45,16 @@
                 <label for="new-email">New User's Email Address:</label>
                 <input type="email" id="new-email" name="new-email">
             </div> 
-            <div>
-                <p>Should the new user have the same setup and access as a current user?</p>
-                <input type="radio" name="copy-user" value="yes">Yes
-                <input type="radio" name="copy-user" value="no">No
+            <div class="copy-user">
+                <label for="copy-user">Should the new user have the same setup and access as a current user?</label>
+                
+                <select id="copy-user">
+                    <option value="">--Select Yes or No--</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
             </div>
-            <div> <!--Hide field unless Yes is chosen for copy-user-->
+            <div class="dup-user"> <!--Hide field unless Yes is chosen for copy-user-->
                 <label for="duplicate">Current User To Duplicate:</label>
                 <input type="text" id="duplicate" name="duplicate-user">
             </div>
@@ -57,7 +62,7 @@
    <!--/Fieldset Necessary for New User Option; Hide if System Issue Selected-->
 
    <!--Fieldset Necessary for System Issue; Hide if New User Selected-->
-        <fieldset>
+        <fieldset class="sys-issue">
                 <legend>USI System Issue Information</legend>
                 <div>
                     <label for="system-issue">Describe the issue you are experiencing:</label>
@@ -73,5 +78,7 @@
                 </div>
             </fieldset>
         <button type="submit">Submit</button>
+
+        <script src="file.js"></script>
     </body>
 </html>
