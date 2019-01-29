@@ -2,12 +2,14 @@
 <html>
     <head> 
     <title>This is a Form</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
-    <h1>Help Desk Ticket - Ungerboeck</h1>
+    <h1>Help Desk Ticket</h1>
     <form action="index.html" method="post"></form>
-        <fieldset>
+        <fieldset class="your-info">
             <legend>Your Information</legend>
             <div>
                 <label for="name">Name:</label>
@@ -20,9 +22,9 @@
             <div>
                 <label for="user-id">User ID:</label>
                 <input type="text" id="user-id" name="user-id">
-            </div>
         </fieldset> 
-        <fieldset>
+        </div>
+        <fieldset class="help">
         <legend>What Do You Need Help With?</legend>
             <div class="new">
                 <label for="new-user">Create New User</label>
