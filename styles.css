@@ -5,6 +5,7 @@ h1 {
     margin: 0 auto;
     text-align: center;
     background: whitesmoke;
+    
 }
 
 h1 {
@@ -18,12 +19,45 @@ fieldset {
     margin: 2em;
 }
 
+.your-info {
+    margin-top: .25em;
+}
+
 div {
     padding: .5em;
 }
 
 legend {
     font-size: 1.25em;
+    font-weight: bold;
 }
 
-@media(){}
+
+@media(min-width: 650px){
+    body {
+        width: 650px;
+    }
+    label{
+        display: inline-block;
+        float: left;
+        clear: left;
+        width: 50%;
+        text-align: right;
+        margin: .25em;
+    }
+    input,
+    #copy-user,
+    textarea {
+        display: inline-block;
+        float: left;
+        margin: .25em;
+
+    }
+    textarea {
+        width: 12em;
+        height: 6em;
+    } 
+    h1 {
+        font-size: 2.5em;
+    }
+}
