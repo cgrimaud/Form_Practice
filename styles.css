@@ -19,7 +19,7 @@ fieldset {
     margin: 2em;
 }
 
-.your-info {
+.yourInfo {
     margin-top: .25em;
 }
 
@@ -32,7 +32,29 @@ legend {
     font-weight: bold;
 }
 
+/* --- Validation Styles --- */
 
+
+#email:invalid,
+#name:invalid,
+#userId:invalid {
+    border-color: red;
+}
+
+#email:valid,
+#name:valid,
+#userId:valid {
+    border-color: green;
+}
+
+form .error {
+    color: red;
+    font-size: .75em;
+    margin-left: 3em;
+    text-align: center;
+}
+
+/* --- Media Query --- */
 @media(min-width: 650px){
     body {
         width: 650px;
@@ -46,7 +68,7 @@ legend {
         margin: .25em;
     }
     input,
-    #copy-user,
+    #copyUser,
     textarea {
         display: inline-block;
         float: left;
@@ -60,4 +82,5 @@ legend {
     h1 {
         font-size: 2.5em;
     }
+
 }

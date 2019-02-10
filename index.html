@@ -5,82 +5,88 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/additional-methods.js"></script> -->
     </head>
     <body>
     <h1>Help Desk Ticket</h1>
-    <form action="index.html" method="post"></form>
-        <fieldset class="your-info">
+    <form action="" method="post" name="helpDeskTicket" id="helpDeskTicket">
+        <fieldset class="yourInfo">
             <legend>Your Information</legend>
             <div>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="user-name">
+                <input type="text" id="name" name="userName">
             </div>
             <div>
                 <label for="email">Email Address:</label>
-                <input type="email" id="email" name="user-email">
+                <input type="email" id="email" name="userEmail">
             </div> 
             <div>
-                <label for="user-id">User ID:</label>
-                <input type="text" id="user-id" name="user-id">
-        </fieldset> 
-        </div>
+                <label for="userid">User ID:</label>
+                <input type="text" id="userId" name="userId">
+            </div>
+            </fieldset> 
+        
         <fieldset class="help">
         <legend>What Do You Need Help With?</legend>
             <div class="new">
-                <label for="new-user">Create New User</label>
-                <input type="radio" name="issue" id="new-user">
+                <label for="newUser">Create New User</label>
+                <input type="radio" name="issue" id="newUser">
             </div>
             <div class="issue">
-                <label for="usi-issue">System Issue</label>
-                <input type="radio" name="issue" id="usi-issue">
+                <label for="usiIssue">System Issue</label>
+                <input type="radio" name="issue" id="usiIssue">
             </div>
         </fieldset>
 
     <!--Fieldset necessary for New User Option; Hide if System Issue Selected-->
-        <fieldset class="new-user">
+        <fieldset class="newUser">
             <legend>New User Information</legend>
             <div>
-                <label for="new-name">New User's First and Last Name:</label>
-                <input type="text" id="new-name" name="new-name">
+                <label for="newName">New User's First and Last Name:</label>
+                <input type="text" id="newName" name="newName">
             </div>  
             <div>
-                <label for="new-email">New User's Email Address:</label>
-                <input type="email" id="new-email" name="new-email">
+                <label for="newEmail">New User's Email Address:</label>
+                <input type="email" id="newEmail" name="newEmail">
             </div> 
-            <div class="copy-user">
-                <label for="copy-user">Should the new user have the same setup and access as a current user?</label>
+            <div class="copyUser">
+                <label for="copyUser">Should the new user have the same setup and access as a current user?</label>
                 
-                <select id="copy-user">
+                <select id="copyUser">
                     <option value="">--Select Yes or No--</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
             </div>
-            <div class="dup-user"> <!--Hide field unless Yes is chosen for copy-user-->
+            <div class="dupUser"> <!--Hide field unless Yes is chosen for copy-user-->
                 <label for="duplicate">Current User To Duplicate:</label>
-                <input type="text" id="duplicate" name="duplicate-user">
+                <input type="text" id="duplicate" name="duplicateUser">
             </div>
         </fieldset>
    <!--/Fieldset Necessary for New User Option; Hide if System Issue Selected-->
 
    <!--Fieldset Necessary for System Issue; Hide if New User Selected-->
-        <fieldset class="sys-issue">
+        <fieldset class="sysIssue">
                 <legend>USI System Issue Information</legend>
                 <div>
-                    <label for="system-issue">Describe the issue you are experiencing:</label>
-                    <textarea type="textarea" id="system-issue" name="system-issue"></textarea>
+                    <label for="systemIssue">Describe the issue you are experiencing:</label>
+                    <textarea type="textarea" id="systemIssue" name="systemIssue"></textarea>
                 </div>  
                 <div>
-                    <label for="system-issue">Where in the system are you experiencing this issue?:</label>
-                    <textarea type="textarea" id="sys-location" name="sys-location"></textarea>
+                    <label for="systemIssue">Where in the system are you experiencing this issue?:</label>
+                    <textarea type="textarea" id="sysLocation" name="sysLocation"></textarea>
                 </div> 
                 <div>
-                    <label for="system-issue">How long has this been an issue?:</label>
-                    <textarea type="textarea" id="issue-length" name="issue-length"></textarea>
+                    <label for="systemIssue">How long has this been an issue?:</label>
+                    <textarea type="textarea" id="issueLength" name="issueLength"></textarea>
                 </div>
             </fieldset>
         <button type="submit">Submit</button>
-
-        <script src="file.js"></script>
+    </form>
+    
+    <script src="file.js"></script>
+    
     </body>
 </html>
+
