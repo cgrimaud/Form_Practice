@@ -15,7 +15,7 @@ h1 {
 }
 
 fieldset {
-    display: flex;
+    display: block;
     margin: 2em;
 }
 
