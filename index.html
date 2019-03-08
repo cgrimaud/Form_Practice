@@ -31,7 +31,7 @@
         <legend>What Do You Need Help With?</legend>
             <div class="new">
                 <label for="newUser">Create New User</label>
-                <input type="radio" name="issue" id="newUser">
+                <input type="radio" name="issue" id="newUser" required></input>
             </div>
             <div class="issue">
                 <label for="usiIssue">System Issue</label>
@@ -63,8 +63,8 @@
                 <label for="duplicate">Current User To Duplicate:</label>
                 <input type="text" id="duplicate" name="duplicateUser">
             </div>
-        </fieldset>
-   <!--/Fieldset Necessary for New User Option; Hide if System Issue Selected-->
+        </fieldset> 
+    <!--/Fieldset Necessary for New User Option; Hide if System Issue Selected-->
 
    <!--Fieldset Necessary for System Issue; Hide if New User Selected-->
         <fieldset class="sysIssue">

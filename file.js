@@ -44,12 +44,12 @@ $(function() {
         userId: {
             required: true,
             minlength: 4
-        },   
+        },  
       },
       messages: {
         userName: "You must enter your name (minimum 3 characters)",
         userEmail: "Please provide a valid email address",
-        userId: "You must enter your USI User ID"
+        userId: "You must enter your USI User ID",
       },
       submitHandler: function(form) {
         console.log(form);
@@ -57,3 +57,17 @@ $(function() {
       }
     });
   });
+
+  $("form").kendoValidator({
+    rules: {
+        radio: function(input) {
+            if (input.filter("[type=radio]") && input.attr("required")) {        
+                return $("form").find("[name=" + input.attr("name") + "]").is(":checked");
+            }
+            return true;
+        }
+    },
+    messages: {
+        radio: "Select one of the options"
+    }
+});
